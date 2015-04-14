@@ -7,8 +7,5 @@ sudo: false
 addons:
   apt:
     sources:
-	  - freeglut3
-	  - freeglut3-dev
-os:
-  - linux
-  - osx
+      - freeglut3
+      - freeglut3-dev
