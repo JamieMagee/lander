@@ -4,6 +4,11 @@ compiler:
   - gcc
 script: make all
 sudo: false
+addons:
+  apt:
+    sources:
+	  - freeglut3
+	  - freeglut3-dev
 os:
   - linux
   - osx
