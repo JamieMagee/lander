@@ -1,4 +1,4 @@
-CFLAGS = -Wall -Werror -Wextra -pedantic
+CFLAGS = -std=c++0x -Wall -Werror -Wextra -pedantic
 CCSW = -O3
 PLATFORM = `uname`
 
