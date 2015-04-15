@@ -2,10 +2,5 @@ language: cpp
 compiler:
   - clang
   - gcc
+install: sudo apt-get install freeglut3-dev
 script: make all
-sudo: false
-addons:
-  apt:
-    sources:
-      - freeglut3
-      - freeglut3-dev
