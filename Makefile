@@ -16,7 +16,7 @@ lander: lander.o lander_graphics.o
 lander_graphics.o lander.o: lander.h
 
 .cpp.o:
-	$(CC) ${CCSW} -c $<
+	$(CC) ${CCSW} $(CFLAGS) -c $<
 
 clean:
 	echo cleaning up; /bin/rm -f core *.o lander
