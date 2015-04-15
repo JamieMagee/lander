@@ -1,14 +1,15 @@
+CFLAGS = -Wall -Werror -Wextra -pedantic
 CCSW = -O3
 PLATFORM = `uname`
 
 lander: lander.o lander_graphics.o
 	@if [ ${PLATFORM} = "Linux" ]; \
-	then $(CC) -o lander lander.o lander_graphics.o ${CCSW} -lGL -lGLU -lglut; \
+	then $(CC) -o lander lander.o lander_graphics.o ${CCSW} $(CFLAGS) -lGL -lGLU -lglut; \
 	echo Linking for Linux; \
 	elif [ ${PLATFORM} = "Darwin" ]; \
-	then $(CC) -o lander lander.o lander_graphics.o ${CCSW} -framework GLUT -framework OpenGL; \
+	then $(CC) -o lander lander.o lander_graphics.o ${CCSW} $(CFLAGS) -framework GLUT -framework OpenGL; \
 	echo Linking for Mac OS X; \
-	else $(CC) -o lander lander.o lander_graphics.o ${CCSW} -lglut32 -lglu32 -lopengl32; \
+	else $(CC) -o lander lander.o lander_graphics.o ${CCSW} $(CFLAGS) -lglut32 -lglu32 -lopengl32; \
 	echo Linking for Cygwin; \
 	fi
 
